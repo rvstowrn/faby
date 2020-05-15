@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contacts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		body{
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+			padding: 25px;
+			box-sizing: border-box;
+			background:#121212;
+			color: white;
+		}
+		.recent{
+			height: 50vh;
+			font-size: 50px;
+		}
+		.recent img{
+			height: 60px;
+			width: 60px;
+		}
+		.contact-card{
+			width: 20vw;
+			height: 40vh;
+		}
+		.contact-card > img{
+			width: 20vw;
+			height: 20vw;
+		}
+		.contact-card > p{
+			font-size: 30px;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+		.card-container{
+			display: flex;
+			justify-content: space-around;
+		}
+		.contact-strip{
+			margin-bottom: 20px;
+			border-radius: 10px;
+			display: inline-block;
+			width: 100%;
+		}
+		.contact-strip:hover{
+			background: rgb(30,30,30);
+			cursor: pointer;
+		}
+		
+		.contact-strip > img{
+			height: 10vh;
+			width: 10vh;
+		}
+		.contact-strip > span{
+			font-size: 45px;
+			position: relative;
+			top: -10px;
+			left: 15px;
+		}
+		
+
+
+
+	</style>
+</head>
+<body>
+	<div class="recent">
+		<span>Recent Calls</span>
+		<span class="rigth-recent" style="float: right">
+		<a href="./machines.html"><img src="./assets/locationIcon.png" style="filter: invert(1);"></a>
+		<a href="./home.html"><img src="./assets/leftArrow.png"></a>
+		</span>
+		<hr>
+		<div class="card-container">
+		<div class="contact-card">
+			<img src="./assets/tempContact.png">
+			<p>contact name<br>2 minutes go</p>
+		</div>
+		<div class="contact-card">
+			<img src="./assets/tempContact.png">
+			<p>contact name<br>2 minutes go</p>
+		</div>
+		<div class="contact-card">
+			<img src="./assets/tempContact.png">
+			<p>contact name<br>2 minutes go</p>
+		</div>
+		<div class="contact-card">
+			<img src="./assets/tempContact.png">
+			<p>contact name<br>2 minutes go</p>
+		</div>
+		</div>
+	</div>
+	<br><br><br>
+	<br><br><br>
+	<div class="contacts">
+		<h2>Contacts</h2><hr>
+		<a href="caller.html" class="contact-strip">
+			<img src="./assets/tempContact.png">
+			<span>John Doe</span>
+		</a>
+		<a class="contact-strip">
+			<img src="./assets/tempContact.png">
+			<span>John Doe</span>
+		</a>
+		<a class="contact-strip">
+			<img src="./assets/tempContact.png">
+			<span>John Doe</span>
+		</a>
+		<a class="contact-strip">
+			<img src="./assets/tempContact.png">
+			<span>John Doe</span>
+		</a>
+		<a class="contact-strip">
+			<img src="./assets/tempContact.png">
+			<span>John Doe</span>
+		</a>
+		
+	</div>
+
+
+	
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+<script src="./videoRequestHandler.js"></script>
+</body>
+</html>

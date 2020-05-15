@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>splash</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		body{
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+			padding: 25px;
+			box-sizing: border-box;
+			background:radial-gradient(turquoise, darkcyan);
+			color: white;
+		}
+		.leftText{
+			float: left;
+			font-size: 30px;
+		}
+		.leftImg{
+			height: 75px;
+			width: 75px;
+			margin-left: 20px;
+		}
+		.rightArrow{
+			float: right;
+			height:65px;
+			transform: translate(-31px,8px);
+		}
+		.container{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			width: 100%;
+		}
+		.blocks{
+			height: 200px;
+			width: 200px;
+			border-radius: 25px;
+			background-color: white;
+			margin-bottom: 15px;
+			text-align: center;
+			color: black;
+			box-sizing: border-box;
+			padding-top: 80px;
+			font-size: 30px;
+		}
+		.overlay{
+			top: 0;
+			left: 0;
+			position: absolute;
+			height: 100vh;
+			width: 100vw;
+			background:radial-gradient(turquoise, darkcyan);
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			font-size: 75px;
+		}
+		.rightFix{
+			position: absolute;
+			top: 3%;
+			right: 3%;
+		}
+	</style>
+</head>
+<body>
+<span class="leftText">17:25<br>25 C</span>
+<img class="leftImg" src="./assets/logo.png">
+<a href="./home.html"><img src='./assets/leftArrow.png' class="rightArrow"></a> 
+<br><br><br>
+<br><br>
+<div class="container">
+<div onclick="machine(1)" class="blocks">Machine 1</div>
+<div onclick="machine(2)" class="blocks">Machine 2</div>
+<div onclick="machine(3)" class="blocks">Machine 3</div>
+<div onclick="machine(4)" class="blocks">Machine 4</div>
+<div onclick="machine(5)" class="blocks">Machine 5</div>
+<div onclick="machine(6)" class="blocks">Machine 6</div>
+<div onclick="machine(7)" class="blocks">Machine 7</div>
+<div onclick="machine(8)" class="blocks">Machine 8</div>
+</div>
+<script type="text/javascript">
+	function machine(id){
+	var node = document.createElement("div");
+	node.setAttribute('class','overlay');
+	node.innerHTML=("<a href='./machines.html'><img src='./assets/leftArrow.png' class='rightFix'></a>")+('going to machine '+id);           
+	document.body.appendChild(node);                            
+	}
+</script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+<script src="./videoRequestHandler.js"></script>
+</body>
+</html>

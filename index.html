@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		body{
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+			padding: 25px;
+			box-sizing: border-box;
+			background:radial-gradient(turquoise, darkcyan);
+			color: white;
+		}
+		.leftText{
+			float: left;
+			font-size: 25px;
+		}
+		.leftImg{
+			height: 60px;
+			width: 60px;
+			margin-left: 10px;
+		}
+		.rightArea{
+			float: right;
+			font-size: 100px;
+		}
+		.rightArea img{
+			height: 60px;
+			width: 60px;
+			transform: translateY(-30px);
+			outline: none;
+		}
+		.w10{
+			width: 10px;
+		}
+		.search{
+			height: 10vh;
+			width: 30vw;
+			background: #e5e5e5;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			border-radius: 25px;
+		}
+		.search > input{
+			height: 10vh;
+			width: 29vw;
+			position: absolute;
+			border-radius: 25px;
+			border:4px solid rgba(0,0,0,0.3);
+			padding-left: 10px;
+			font-size: 3vh;
+		}
+		.search > button{
+			position: absolute;
+			z-index: 100;
+			font-size: 8vh;
+			right: 2%;
+			background: transparent;
+			border:0;
+			transform: rotate(180deg) scale(-1,1);
+			color: gray;		
+		}
+
+	</style>
+</head>
+<body>
+<span class="leftText">17:25<br>25 C</span>
+<img class="leftImg" src="./assets/logo.png">
+<img class="leftImg w10" src="./assets/barricade.png">
+<a href="./volume.html"><img class="leftImg" src="./assets/microphone.png"></a>
+<img class="leftImg" src="./assets/battery.png">
+<img class="leftImg" src="./assets/wifi.png">
+<span class="rightArea"> 
+<a href="./contacts.html"><img src="./assets/contactIcon.png"></a>
+<a href="./machines.html"><img src="./assets/locationIcon.png"></a>
+</span>
+</div>
+<div class="search">
+	<input type="text" name="neon" placeholder="Hi Google">
+	<button>&#9740;</button>
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+<script src="./videoRequestHandler.js"></script>
+</body>
+</html>
+
+
+
+
